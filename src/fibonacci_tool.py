@@ -17,7 +17,7 @@ def find_fibo_id(number: int) -> int:
 
 def get_fibo_num(pos: int) -> int:
     """Get fibonacci number in specific position."""
-    return fibonacci(pos)
+    return int(fibonacci(pos))
 
 def get_prev_next_fibo(integer: int) -> list:
     """Create list with previous and next fibonacci number (replaced by None if not fibonacci number)."""
