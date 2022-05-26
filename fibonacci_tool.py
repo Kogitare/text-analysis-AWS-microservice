@@ -12,7 +12,8 @@ def is_in_fibo(number: int) -> bool:
 
 def find_fibo_id(number: int) -> int:
     """Find position of a number in fibonacci sequence."""
-    return int(ln(number * sqrt(5) + 1.0/2, phi))
+    pos = int(ln(number * sqrt(5) + 1.0/2, phi))
+    return pos if pos > 0 else 1
 
 def get_fibo(pos: int) -> int:
     """Get fibonacci number in specific position."""
