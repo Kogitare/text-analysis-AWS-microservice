@@ -24,7 +24,7 @@ def save_dict_as_json(dictionary: dict, path: str, filename = 'words.json'):
 if __name__ == "__main__":
     path_in = './input/text_in.txt'
     path_out = './output/'
-    csv_headers = ['previos Fibonacci number', 'observed number', 'next Fibonacci number']
+    csv_headers = ['previous Fibonacci number', 'observed number', 'next Fibonacci number']
     parsed = parse_file(path_in)
     save_list_as_csv(csv_headers, parsed[0], path_out)
     save_dict_as_json(parsed[1], path_out)
