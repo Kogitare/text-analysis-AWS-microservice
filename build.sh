@@ -1,4 +1,4 @@
-rm -r build
+rm deployment_package.zip
 mkdir build
 cd src
 echo "### Created build folder."
