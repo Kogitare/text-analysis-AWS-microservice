@@ -22,7 +22,7 @@ def save_list_as_csv(table_header: list, table_data: list, path: str, filename =
 def save_dict_as_json(dictionary: dict, path: str, filename = 'output.json'):
     """Save dictionary into json file"""
     with open(path+filename, 'w') as f:
-        json.dump(dictionary, f)
+        json.dump(dictionary, f, indent=1)
 
 # Run script locally
 if __name__ == "__main__":
