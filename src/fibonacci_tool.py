@@ -6,13 +6,12 @@ phi = N((1 + sqrt(5))/2, 20)  # phi number for mathematical operations
 
 def is_in_fibo(number: int) -> bool:
     """Check if number is part of the fibonacci sequence."""
-    test_equation = lambda sign: sqrt(5 * number**2 +(4 * sign)) - int(sqrt(5 * number**2 +(4 * sign)))
-    if test_equation(1) == 0 or test_equation(-1) == 0: return True
+    if sqrt(5 * number**2 + 4).is_integer or sqrt(5 * number**2 - 4).is_integer: return True
     else: return False
 
 def find_fibo_id(number: int) -> int:
     """Find position of a number in fibonacci sequence."""
-    pos = int(ln(number * sqrt(5) + 1.0/2, phi))
+    pos = ln(number * sqrt(5) + 1.0/2, phi) // 1
     return pos if pos > 0 else 1
 
 def get_fibo_num(pos: int) -> int:
