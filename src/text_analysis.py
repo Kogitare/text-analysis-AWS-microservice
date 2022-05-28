@@ -9,7 +9,7 @@ def get_integers(text: str) -> list:
     matches.sort()
     return matches
 
-def get_words(text: str):
+def get_words(text: str) -> dict:
     """Finds all words (and/or character sets) based on latin alphabet."""
     matches = [num.lower() for num in re.findall(r'[a-zA-Z]+', text)]
     unique_matches = list(set(matches))
@@ -17,4 +17,8 @@ def get_words(text: str):
 
 def create_fibo_table(integer_list: list) -> list[list]:
     """Creates a table where rows consist of integers and (if they belong) fibonacci numbers."""
-    return [get_prev_next_fibo(integer) for integer in integer_list]
+    headers = ["previous Fibonacci number", "observed number", "next Fibonacci number"]
+    numbers = [get_prev_next_fibo(integer) for integer in integer_list]
+    table = [headers]
+    table.extend(numbers)
+    return table
