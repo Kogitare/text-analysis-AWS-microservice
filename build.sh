@@ -1,4 +1,5 @@
 rm deployment_package.zip
+rm -r build
 mkdir build
 cd src
 echo "### Created build folder."
@@ -12,10 +13,10 @@ deactivate
 echo "### Installed dependencies in virtual environment."
 
 cd lib/python3.10/site-packages
-# removing unnecessary files
-rm -r pip*
-rm -r *.exe
-zip -r ../../../../deployment_package.zip .
+find . -type d -name __pycache__ -exec rm -r {} \;
+zip -r ../../../../deployment_package.zip mpmath
+zip -r ../../../../deployment_package.zip sympy
+zip -r ../../../../deployment_package.zip isympy.py
 echo "### Created deployment_package.zip"
 
 cd ../../../../src
