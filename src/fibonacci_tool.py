@@ -2,7 +2,7 @@
 
 from sympy import fibonacci, sqrt, N, ln
 
-phi = N((1 + sqrt(5))/2, 20)  # phi number for mathematical operations
+phi = N((1 + sqrt(5))/2, 20)  # used for maths
 
 def is_in_fibo(number: int) -> bool:
     """Check if number is part of the fibonacci sequence."""
