@@ -6,9 +6,7 @@ import os
 def upload_file_to_s3(origin_file_name: str, file_name: str) -> bool:
     """Uploads a file into S3 bucket folder"""
     s3_client = boto3.client(
-        's3',
-        aws_access_key_id=os.environ.get('S3_USER_KEY'),
-        aws_secret_access_key=os.environ.get('S3_USER_SKEY')
+        's3'
     )
     try:
         s3_client.upload_file(
