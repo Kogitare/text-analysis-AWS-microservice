@@ -1,0 +1,91 @@
+test_files/numbers/
+['number 2 5KB one.txt', 'numbers 5KB long.txt', 'numbers 2 5KB long.txt', 'number 1KB one.txt', 'number 500B one.txt', 'numbers 5KB small.txt', 'numbers 1KB long.txt', 'numbers 10KB smaller.txt']
+---------------------------------------------------------------
+Function get_integers(number 2 5KB one.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	1
+0.07119891233742237	ms
+Function get_integers(numbers 5KB long.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	392
+0.32325019128620625	ms
+Function get_integers(numbers 2 5KB long.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	198
+0.15814206562936306	ms
+Function get_integers(number 1KB one.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	1
+0.020586885511875153	ms
+Function get_integers(number 500B one.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	1
+0.023414846509695053	ms
+Function get_integers(numbers 5KB small.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	387
+0.6202631630003452	ms
+Function get_integers(numbers 1KB long.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	75
+0.059930142015218735	ms
+Function get_integers(numbers 10KB smaller.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	508
+1.0904159862548113	ms
+---------------------------------------------------------------
+Function create_fibo_table(number 2 5KB one.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	1
+55315.89964800514	ms
+Function create_fibo_table(numbers 5KB long.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	392
+2172.853426076472	ms
+Function create_fibo_table(numbers 2 5KB long.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	198
+1022.6524551399052	ms
+Function create_fibo_table(number 1KB one.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	1
+6074.205035110936	ms
+Function create_fibo_table(number 500B one.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	1
+616.8711548671126	ms
+Function create_fibo_table(numbers 5KB small.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	387
+697.105173021555	ms
+Function create_fibo_table(numbers 1KB long.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	75
+408.09299307875335	ms
+Function create_fibo_table(numbers 10KB smaller.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	508
+803.3004060853273	ms
+
+
+
+test_files/words/
+['words 500KB long.txt', 'word 2MB one.txt', 'words 1MB lorem ipsum.txt', 'words 1MB.txt', 'words 1MB long.txt', 'words 1MB short.txt', 'words 100KB short.txt', 'words 500KB short.txt', 'words 1MB short mulitline.txt', 'words 50KB short.txt', 'words 100KB long.txt']
+---------------------------------------------------------------
+Function get_words(words 500KB long.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	16825
+3395.410807803273	ms
+Function get_words(word 2MB one.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	1
+9.459977969527245	ms
+Function get_words(words 1MB lorem ipsum.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	186
+432.762267999351	ms
+Function get_words(words 1MB.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	57340
+48170.14330299571	ms
+Function get_words(words 1MB long.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	33645
+14789.023295976222	ms
+Function get_words(words 1MB short.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	92391
+225621.70131294988	ms
+Function get_words(words 100KB short.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	10594
+1994.475293904543	ms
+Function get_words(words 500KB short.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	49133
+60868.84485301562	ms
+Function get_words(words 1MB short mulitline.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	92391
+230399.792436976	ms
+Function get_words(words 50KB short.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	5580
+510.56214119307697	ms
+Function get_words(words 100KB long.txt) from text_analysis after 1 iteration(s) took:
+INPUT_AMOUNT:	3319
+131.64676493033767	ms
