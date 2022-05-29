@@ -1,17 +1,16 @@
 # Analyze text from file and write results to csv and json files
 
 from text_analysis import get_integers, get_words, create_fibo_table
-from api_com_manager import responses, parse_request
+from req_res_manager import responses, parse_request
 from s3_com_manager import upload_file_to_s3
 import json, csv
-import logging  # AWS library
 import os
 
 def lambda_handler(req, context):
     """Handles incoming HTTP request."""
-    is_usable = parse_request(req)
+    request_status = parse_request(req)
 
-    if is_usable == True:
+    if request_status == "success":
         text_file = req['body']
 
         table = get_integers(text_file)
@@ -25,7 +24,6 @@ def lambda_handler(req, context):
             else: raise
             os.remove('/tmp/'+file_name)
         except Exception as err:
-            logging.error(err)
             return responses['server_err']
 
         words = get_words(text_file)
@@ -37,13 +35,6 @@ def lambda_handler(req, context):
             else: raise
             os.remove('/tmp/'+file_name)
         except Exception as err:
-            logging.error(err)
             return responses['server_err']
     
-    elif is_usable == 'request_err':
-        return responses['request_err']
-    
-    elif is_usable == 'wrong_type_err':
-        return responses['wrong_content_type']
-    
-    return responses['success']
+    return responses[request_status]
