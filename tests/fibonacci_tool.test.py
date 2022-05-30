@@ -107,7 +107,7 @@ if __name__ == "__main__":
     # turtle.update()
     # input()
 
-    # a = 220000
+    # a = 180000
     # b = 0.02
     # numbers = [[x+origin[0], ((((x)**2)/a)+b)*time_multiplier+origin[1]] for x in range(1241)]
     # turtle.color('grey')

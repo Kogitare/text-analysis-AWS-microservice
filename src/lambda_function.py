@@ -13,7 +13,8 @@ def lambda_handler(req, context):
     if request_status == "success":
         text_file = req['body']
 
-        table = get_integers(text_file)
+        try: table = get_integers(text_file)
+        except ValueError: return responses['not_allowed']
         table = create_fibo_table(table)
         file_name = "output.csv"
         try:
@@ -26,7 +27,8 @@ def lambda_handler(req, context):
         except Exception as err:
             return responses['server_err']
 
-        words = get_words(text_file)
+        try: words = get_words(text_file)
+        except ValueError: return responses['not_allowed']
         file_name = "output.json"
         try:
             with open('/tmp/'+file_name, 'w') as f:

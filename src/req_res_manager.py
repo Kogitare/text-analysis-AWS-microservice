@@ -4,7 +4,7 @@ import json
 
 def parse_request(req: dict) -> str:
     """Checks if request checks requirements"""
-    size_limit = 1000000    # 1MB
+    size_limit = 500000    # 500KB
     if "body" not in req.keys() or "headers" not in req.keys():
         return "request_err"
     if "content-type" not in req['headers'].keys() or "content-length" not in req['headers'].keys():
@@ -28,6 +28,13 @@ responses = {
         'headers': {'Content-Type': 'application/json'},
         'body': json.dumps({
             "message": "Wrong Content Type"
+        })
+    },
+    "not_allowed": {
+        'statusCode': 422,
+        'headers': {'Content-Type': 'application/json'},
+        'body': json.dumps({
+            "message": "Unprocessable Entity (numbers or words too big/many)"
         })
     },
     "request_err": {
